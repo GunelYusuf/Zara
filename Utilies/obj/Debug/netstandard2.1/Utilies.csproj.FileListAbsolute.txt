@@ -1,0 +1,10 @@
+/Users/gunelyusubova/Projects/ZaraCore/Utilies/bin/Debug/netstandard2.1/Utilies.deps.json
+/Users/gunelyusubova/Projects/ZaraCore/Utilies/bin/Debug/netstandard2.1/Utilies.dll
+/Users/gunelyusubova/Projects/ZaraCore/Utilies/bin/Debug/netstandard2.1/Utilies.pdb
+/Users/gunelyusubova/Projects/ZaraCore/Utilies/obj/Debug/netstandard2.1/Utilies.csproj.AssemblyReference.cache
+/Users/gunelyusubova/Projects/ZaraCore/Utilies/obj/Debug/netstandard2.1/Utilies.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gunelyusubova/Projects/ZaraCore/Utilies/obj/Debug/netstandard2.1/Utilies.AssemblyInfoInputs.cache
+/Users/gunelyusubova/Projects/ZaraCore/Utilies/obj/Debug/netstandard2.1/Utilies.AssemblyInfo.cs
+/Users/gunelyusubova/Projects/ZaraCore/Utilies/obj/Debug/netstandard2.1/Utilies.csproj.CoreCompileInputs.cache
+/Users/gunelyusubova/Projects/ZaraCore/Utilies/obj/Debug/netstandard2.1/Utilies.dll
+/Users/gunelyusubova/Projects/ZaraCore/Utilies/obj/Debug/netstandard2.1/Utilies.pdb

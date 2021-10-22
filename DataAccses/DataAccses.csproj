@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Grpc.Tools" />
+    <None Remove="Google.Protobuf" />
+    <None Remove="Grpc.Net.ClientFactory" />
+    <None Remove="Interface\" />
+    <None Remove="Repository\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Grpc.Tools" Version="2.23.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Google.Protobuf" Version="3.9.1" />
+    <PackageReference Include="Grpc.Net.ClientFactory" Version="2.23.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interface\" />
+    <Folder Include="Repository\" />
+  </ItemGroup>
+</Project>

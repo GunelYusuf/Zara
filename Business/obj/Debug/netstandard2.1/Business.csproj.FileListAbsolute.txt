@@ -1,0 +1,15 @@
+/Users/gunelyusubova/Projects/ZaraCore/Business/obj/Debug/netstandard2.1/Business.csproj.AssemblyReference.cache
+/Users/gunelyusubova/Projects/ZaraCore/Business/obj/Debug/netstandard2.1/Business.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gunelyusubova/Projects/ZaraCore/Business/obj/Debug/netstandard2.1/Business.AssemblyInfoInputs.cache
+/Users/gunelyusubova/Projects/ZaraCore/Business/obj/Debug/netstandard2.1/Business.AssemblyInfo.cs
+/Users/gunelyusubova/Projects/ZaraCore/Business/obj/Debug/netstandard2.1/Business.csproj.CoreCompileInputs.cache
+/Users/gunelyusubova/Projects/ZaraCore/Business/bin/Debug/netstandard2.1/Business.deps.json
+/Users/gunelyusubova/Projects/ZaraCore/Business/bin/Debug/netstandard2.1/Business.dll
+/Users/gunelyusubova/Projects/ZaraCore/Business/bin/Debug/netstandard2.1/Business.pdb
+/Users/gunelyusubova/Projects/ZaraCore/Business/bin/Debug/netstandard2.1/DataAccses.dll
+/Users/gunelyusubova/Projects/ZaraCore/Business/bin/Debug/netstandard2.1/Entities.dll
+/Users/gunelyusubova/Projects/ZaraCore/Business/bin/Debug/netstandard2.1/Entities.pdb
+/Users/gunelyusubova/Projects/ZaraCore/Business/bin/Debug/netstandard2.1/DataAccses.pdb
+/Users/gunelyusubova/Projects/ZaraCore/Business/obj/Debug/netstandard2.1/Business.csproj.CopyComplete
+/Users/gunelyusubova/Projects/ZaraCore/Business/obj/Debug/netstandard2.1/Business.dll
+/Users/gunelyusubova/Projects/ZaraCore/Business/obj/Debug/netstandard2.1/Business.pdb

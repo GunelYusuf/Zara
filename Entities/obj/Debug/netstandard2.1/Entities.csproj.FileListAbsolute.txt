@@ -1,0 +1,10 @@
+/Users/gunelyusubova/Projects/ZaraCore/Entities/bin/Debug/netstandard2.1/Entities.deps.json
+/Users/gunelyusubova/Projects/ZaraCore/Entities/bin/Debug/netstandard2.1/Entities.dll
+/Users/gunelyusubova/Projects/ZaraCore/Entities/bin/Debug/netstandard2.1/Entities.pdb
+/Users/gunelyusubova/Projects/ZaraCore/Entities/obj/Debug/netstandard2.1/Entities.csproj.AssemblyReference.cache
+/Users/gunelyusubova/Projects/ZaraCore/Entities/obj/Debug/netstandard2.1/Entities.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gunelyusubova/Projects/ZaraCore/Entities/obj/Debug/netstandard2.1/Entities.AssemblyInfoInputs.cache
+/Users/gunelyusubova/Projects/ZaraCore/Entities/obj/Debug/netstandard2.1/Entities.AssemblyInfo.cs
+/Users/gunelyusubova/Projects/ZaraCore/Entities/obj/Debug/netstandard2.1/Entities.csproj.CoreCompileInputs.cache
+/Users/gunelyusubova/Projects/ZaraCore/Entities/obj/Debug/netstandard2.1/Entities.dll
+/Users/gunelyusubova/Projects/ZaraCore/Entities/obj/Debug/netstandard2.1/Entities.pdb

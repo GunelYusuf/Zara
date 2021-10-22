@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Interfaces\" />
+    <None Remove="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+    <ProjectReference Include="..\DataAccses\DataAccses.csproj" />
+  </ItemGroup>
+</Project>

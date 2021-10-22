@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{431B6075-01B8-4530-807C-BC40E9370B17}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Console_Application/Program.cs">
+    <Files>
+      <File FileName="Console_Application/Controller/ClothesController.cs" Line="54" Column="57" />
+      <File FileName="DataAccses/Repository/BagsRepository.cs" />
+      <File FileName="DataAccses/Repository/ShoesRepository.cs" />
+      <File FileName="Business/Services/ClothesServices.cs" />
+      <File FileName="Business/Services/BagsServices.cs" />
+      <File FileName="Business/Interfaces/IClothes.cs" />
+      <File FileName="DataAccses/Interface/IRepository.cs" />
+      <File FileName="DataAccses/Repository/ClothesRepository.cs" />
+      <File FileName="Console_Application/Program.cs" Line="58" Column="15" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ZaraCore" expanded="True">
+            <Node name="Business" expanded="True">
+              <Node name="Interfaces" expanded="True" />
+              <Node name="Services" expanded="True" />
+            </Node>
+            <Node name="Console_Application" expanded="True">
+              <Node name="Controller" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+            <Node name="DataAccses" expanded="True">
+              <Node name="Interface" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Console__Application PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

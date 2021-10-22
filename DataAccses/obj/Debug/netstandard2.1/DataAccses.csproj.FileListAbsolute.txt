@@ -1,0 +1,13 @@
+/Users/gunelyusubova/Projects/ZaraCore/DataAccses/bin/Debug/netstandard2.1/DataAccses.deps.json
+/Users/gunelyusubova/Projects/ZaraCore/DataAccses/bin/Debug/netstandard2.1/DataAccses.dll
+/Users/gunelyusubova/Projects/ZaraCore/DataAccses/bin/Debug/netstandard2.1/DataAccses.pdb
+/Users/gunelyusubova/Projects/ZaraCore/DataAccses/bin/Debug/netstandard2.1/Entities.dll
+/Users/gunelyusubova/Projects/ZaraCore/DataAccses/bin/Debug/netstandard2.1/Entities.pdb
+/Users/gunelyusubova/Projects/ZaraCore/DataAccses/obj/Debug/netstandard2.1/DataAccses.csproj.AssemblyReference.cache
+/Users/gunelyusubova/Projects/ZaraCore/DataAccses/obj/Debug/netstandard2.1/DataAccses.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gunelyusubova/Projects/ZaraCore/DataAccses/obj/Debug/netstandard2.1/DataAccses.AssemblyInfoInputs.cache
+/Users/gunelyusubova/Projects/ZaraCore/DataAccses/obj/Debug/netstandard2.1/DataAccses.AssemblyInfo.cs
+/Users/gunelyusubova/Projects/ZaraCore/DataAccses/obj/Debug/netstandard2.1/DataAccses.csproj.CoreCompileInputs.cache
+/Users/gunelyusubova/Projects/ZaraCore/DataAccses/obj/Debug/netstandard2.1/DataAccses.csproj.CopyComplete
+/Users/gunelyusubova/Projects/ZaraCore/DataAccses/obj/Debug/netstandard2.1/DataAccses.dll
+/Users/gunelyusubova/Projects/ZaraCore/DataAccses/obj/Debug/netstandard2.1/DataAccses.pdb
