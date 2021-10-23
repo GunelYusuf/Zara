@@ -8,7 +8,7 @@ namespace Entities.Models
        
         public int RefId { get; set; }
 
-        public int Size { get; set; }
+        public int Quantity { get; set; }
 
         public string Type{ get; set; }
     }

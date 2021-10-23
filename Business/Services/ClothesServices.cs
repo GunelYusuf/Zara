@@ -33,45 +33,74 @@ namespace Business.Services
             }
         }
 
+        public List<Clothes> GetAll()
+        {
+            return clothesRepository.GetAll();
+        }
+       
+
+        public List<Clothes> GetAll(int Quantity)
+        {
+            List<Clothes> clothes = clothesRepository.GetAll(g => g.Quantity == Quantity);
+            return clothes;
+            
+        }
+
+        public Clothes Update(int RefId, Clothes clothes)
+        {
+            try
+            {
+                Clothes dbClothes = clothesRepository.Get(s => s.RefId == clothes.RefId);
+                dbClothes.Type = clothes.Type;
+                dbClothes.RefId = clothes.RefId;
+                return clothes;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            
+        }
+
         public Clothes Delete(int RefId)
         {
-            Clothes clothes = clothesRepository.Get(g => g.RefId == RefId);
-            if (clothes!=null)
+            Clothes dbClothes = clothesRepository.Get(g => g.RefId == RefId);
+            if (dbClothes != null)
             {
-                clothesRepository.Delete(clothes);
-                return clothes;
+                clothesRepository.Delete(dbClothes);
+                return dbClothes;
             }
             else
             {
                 return null;
             }
-
-            
         }
 
         public Clothes Get(int RefId)
         {
-            throw new System.NotImplementedException();
+            Clothes dbClothes = clothesRepository.Get(g => g.RefId == RefId);
+            if (dbClothes != null)
+            {
+               
+                return dbClothes;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public Clothes Get(string Type)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public List<Clothes> GetAll()
-        {
-            return clothesRepository.GetAll();
-        }
-
-        public List<Clothes> GetAll(int Size)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public Clothes Update(int RefId, Clothes clothes)
-        {
-            throw new System.NotImplementedException();
+            Clothes dbClothes = clothesRepository.Get(g => g.Type == Type);
+            if (dbClothes != null)
+            {
+                return dbClothes;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

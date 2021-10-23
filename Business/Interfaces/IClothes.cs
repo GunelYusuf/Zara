@@ -10,8 +10,10 @@ namespace Business.Interfaces
         Clothes Delete(int RefId);
         Clothes Get(int RefId);
         Clothes Get(string Type);
+      
+       
         List<Clothes> GetAll();
-        List<Clothes> GetAll(int Size);
+        List<Clothes> GetAll(int Quantity);
 
     }
 }

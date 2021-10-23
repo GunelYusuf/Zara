@@ -5,7 +5,7 @@ namespace Entities.Models
 {
     public class Shoes:IEntity
     {
-        public int Size { get; set; }
+        public int Quantity { get; set; }
 
         public int RefId { get; set; }
 

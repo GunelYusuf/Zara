@@ -27,18 +27,22 @@ namespace Console_Application
                             clothesController.Create();
                             break;
                         case (int)Helper.Menu.UpdateClothes:
+                            clothesController.Update();
                             break;
                         case (int)Helper.Menu.DeleteClothes:
                             clothesController.GetAllClothes();
                             clothesController.DeleteClothes();
                             break;
                         case (int)Helper.Menu.GetClotheswithRefId:
+                            clothesController.Get();
+                            break;
+                        case (int)Helper.Menu.GetClotheswithType:
+                            clothesController.GeT();
                             break;
                         case (int)Helper.Menu.GetAllClothes:
                             clothesController.GetAllClothes();
                             break;
-                        case (int)Helper.Menu.GetClotheswithSize:
-                            break;
+                       
                     }
                 }
                 else if(menu==0)
