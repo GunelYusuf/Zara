@@ -16,13 +16,17 @@ namespace Console_Application.Controller
         {
             Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Enter Clothes Type: ");
             string type = Console.ReadLine();
-        EnterType: Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Enter clothes Size: ");
+            EnterType: Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Enter clothes Size: ");
             string size = Console.ReadLine();
+            Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Enter Clothes Amount: ");
+            string Amount = Console.ReadLine();
             int Size;
+            int amount;
+            bool IsTrueAmount = int.TryParse(Amount, out amount);
             bool isTrueSize = int.TryParse(size, out Size);
-            if (isTrueSize)
+            if (isTrueSize&& IsTrueAmount)
             {
-                Clothes trousers = new Clothes { Type = type, Quantity = Size };
+                Clothes trousers = new Clothes { Type = type,Size = Size,Quantity=amount };
 
                 if (clothesService.Create(trousers) != null)
                 {
@@ -31,7 +35,7 @@ namespace Console_Application.Controller
                 }
                 else
                 {
-                    Helper.ChangeTextColor(ConsoleColor.DarkMagenta, $"{trousers.RefId} couldn't create");
+                    Helper.ChangeTextColor(ConsoleColor.DarkMagenta, $"{trousers.Type} couldn't create");
                     return;
                 }
             }
@@ -46,7 +50,7 @@ namespace Console_Application.Controller
             Helper.ChangeTextColor(ConsoleColor.DarkYellow, "All Clothes:");
             foreach (Clothes clothes in clothesService.GetAll())
             {
-                Helper.ChangeTextColor(ConsoleColor.DarkBlue, $"{clothes.RefId}-{clothes.Type}");
+                Helper.ChangeTextColor(ConsoleColor.DarkBlue, $"{clothes.Size}-{clothes.Type}");
             }
         }
 
@@ -59,16 +63,15 @@ namespace Console_Application.Controller
             if (isTrue)
             {
                 Clothes skirt = clothesService.Get(ClothesId);
-                Helper.ChangeTextColor(ConsoleColor.Blue, $"{ClothesId} is {skirt.Type} ");
+                Helper.ChangeTextColor(ConsoleColor.Blue, $"{ClothesId} is {skirt.Type} and {skirt.Quantity} ");
             }
         }
-
         public void GeT()
-        {
+        { 
             Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Enter clothes Type: ");
-            string id = Console.ReadLine();
-            Clothes coat = clothesService.Get(id);
-            Helper.ChangeTextColor(ConsoleColor.Blue, $"{coat.Type} is {coat.RefId}");
+            string type = Console.ReadLine();
+            Clothes coat = clothesService.Get(type);
+            Helper.ChangeTextColor(ConsoleColor.Blue, $"{coat.Type} is {coat.RefId} and {coat.Quantity}");
         }
         public void DeleteClothes()
         {
@@ -109,7 +112,11 @@ namespace Console_Application.Controller
                 int size = int.Parse(Console.ReadLine());
                 Helper.ChangeTextColor(ConsoleColor.DarkBlue, $"Please,Enter new type:");
                 string type = Console.ReadLine();
-                Clothes jeans = new Clothes {Type = type,RefId=Id };
+                Helper.ChangeTextColor(ConsoleColor.DarkBlue, $"Please,Enter new quantity:");
+                string quantity = Console.ReadLine();
+                int Amount;
+                bool isTrueAmount = int.TryParse(quantity, out Amount);
+                Clothes jeans = new Clothes {Type = type,RefId=Id,Quantity=Amount };
                 clothesService.Update(Id,jeans);
                 Helper.ChangeTextColor(ConsoleColor.Blue, $"{jeans.Type} is updated ");
             }
@@ -118,9 +125,27 @@ namespace Console_Application.Controller
                 Helper.ChangeTextColor(ConsoleColor.Blue, $"Please,Enter the correct format");
             }
 
+        }
 
+        public void GetAllQuantity()
+        {
+            Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Enter Clothes Type: ");
+            string type = Console.ReadLine();
+            Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Enter clothes Size: ");
+            string size = Console.ReadLine();
+            int Size;
+            bool isTrue = int.TryParse(size,out Size);
 
-
+            if (isTrue) 
+            {
+                foreach (Clothes coat in clothesService.GetAll())
+                {
+                    if (coat.Type == type && coat.Size == Size)
+                    {
+                        Helper.ChangeTextColor(ConsoleColor.DarkBlue, $"{coat.Type} is {coat.Quantity} pieces");
+                    }
+                }
+            }
 
         }
     }

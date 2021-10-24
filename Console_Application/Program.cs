@@ -19,7 +19,7 @@ namespace Console_Application
                 string selectedMenu = Console.ReadLine();
                 int menu;
                 bool isTrue = int.TryParse(selectedMenu, out menu);
-                if (isTrue && menu >= 1 && menu <= 7)
+                if (isTrue && menu >= 1 && menu <= 8)
                 {
                     switch (menu)
                     {
@@ -42,6 +42,9 @@ namespace Console_Application
                         case (int)Helper.Menu.GetAllClothes:
                             clothesController.GetAllClothes();
                             break;
+                        case (int)Helper.Menu.GetAllQuantity:
+                            clothesController.GetAllQuantity();
+                            break;
                        
                     }
                 }
@@ -62,7 +65,7 @@ namespace Console_Application
         static void ShowMenu()
         {
             Helper.ChangeTextColor(ConsoleColor.DarkGreen, "1-Create Clothes,2-Update Clothes,3-Delete Clothes,4-Get Clothes with RefId," +
-                   "5-Get Clothes with Type,6-All Clothes,7-Get Clothes with Size 0-Exit");
+                   "5-Get Clothes with Type,6-All Clothes,7-Get Clothes with Size,8-Get All Clothes Quantity, 0-Exit");
             Helper.ChangeTextColor(ConsoleColor.DarkYellow, "Select option: ");
         }
     }

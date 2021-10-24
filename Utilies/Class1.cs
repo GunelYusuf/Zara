@@ -21,7 +21,9 @@ namespace Utilies.Helper
             GetClotheswithRefId=4,
             GetClotheswithType=5,
             GetAllClothes=6,
-            GetClotheswithSize=7
+            GetClotheswithSize=7,
+            GetAllQuantity=8
+
         }
     }
 }

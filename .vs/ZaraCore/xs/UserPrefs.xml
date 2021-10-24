@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{431B6075-01B8-4530-807C-BC40E9370B17}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Business/Services/ShoesServices.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Console_Application/Controller/ClothesController.cs">
     <Files>
-      <File FileName="Console_Application/Controller/ClothesController.cs" Line="112" Column="66" />
+      <File FileName="Console_Application/Controller/ClothesController.cs" Line="141" Column="17" />
       <File FileName="DataAccses/Repository/BagsRepository.cs" />
       <File FileName="DataAccses/Repository/ShoesRepository.cs" />
-      <File FileName="Business/Services/ClothesServices.cs" Line="1" Column="1" />
+      <File FileName="Business/Services/ClothesServices.cs" />
       <File FileName="Business/Services/BagsServices.cs" />
       <File FileName="Business/Interfaces/IClothes.cs" />
       <File FileName="DataAccses/Interface/IRepository.cs" />
@@ -12,7 +12,9 @@
       <File FileName="Console_Application/Program.cs" />
       <File FileName="Utilies/Class1.cs" />
       <File FileName="DataAccses/DbContext.cs" />
-      <File FileName="Business/Services/ShoesServices.cs" Line="1" Column="1" />
+      <File FileName="Business/Services/ShoesServices.cs" />
+      <File FileName="Entities/Models/Clothes.cs" />
+      <File FileName="Entities/Interface/IEntity.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,12 +22,12 @@
           <Node name="ZaraCore" expanded="True">
             <Node name="Business" expanded="True">
               <Node name="Interfaces" expanded="True" />
-              <Node name="Services" expanded="True">
-                <Node name="ShoesServices.cs" selected="True" />
-              </Node>
+              <Node name="Services" expanded="True" />
             </Node>
             <Node name="Console_Application" expanded="True">
-              <Node name="Controller" expanded="True" />
+              <Node name="Controller" expanded="True">
+                <Node name="ClothesController.cs" selected="True" />
+              </Node>
             </Node>
             <Node name="DataAccses" expanded="True">
               <Node name="Interface" expanded="True" />
