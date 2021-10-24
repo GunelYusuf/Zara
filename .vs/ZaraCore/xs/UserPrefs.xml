@@ -1,20 +1,23 @@
 ﻿<Properties StartupConfiguration="{431B6075-01B8-4530-807C-BC40E9370B17}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Console_Application/Controller/ClothesController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Entities/Models/Shoes.cs">
     <Files>
-      <File FileName="Console_Application/Controller/ClothesController.cs" Line="141" Column="17" />
+      <File FileName="Console_Application/Controller/ClothesController.cs" Line="12" Column="10" />
       <File FileName="DataAccses/Repository/BagsRepository.cs" />
       <File FileName="DataAccses/Repository/ShoesRepository.cs" />
-      <File FileName="Business/Services/ClothesServices.cs" />
+      <File FileName="Business/Services/ClothesServices.cs" Line="39" Column="47" />
       <File FileName="Business/Services/BagsServices.cs" />
-      <File FileName="Business/Interfaces/IClothes.cs" />
+      <File FileName="Business/Interfaces/IClothes.cs" Line="14" Column="8" />
       <File FileName="DataAccses/Interface/IRepository.cs" />
-      <File FileName="DataAccses/Repository/ClothesRepository.cs" />
+      <File FileName="DataAccses/Repository/ClothesRepository.cs" Line="1" Column="1" />
       <File FileName="Console_Application/Program.cs" />
       <File FileName="Utilies/Class1.cs" />
       <File FileName="DataAccses/DbContext.cs" />
-      <File FileName="Business/Services/ShoesServices.cs" />
-      <File FileName="Entities/Models/Clothes.cs" />
+      <File FileName="Business/Services/ShoesServices.cs" Line="26" Column="30" />
+      <File FileName="Entities/Models/Clothes.cs" Line="10" Column="38" />
       <File FileName="Entities/Interface/IEntity.cs" />
+      <File FileName="Console_Application/Controller/ShoesController.cs" Line="145" Column="99" />
+      <File FileName="Business/Interfaces/IShoes.cs" Line="14" Column="41" />
+      <File FileName="Entities/Models/Shoes.cs" Line="10" Column="39" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,13 +28,16 @@
               <Node name="Services" expanded="True" />
             </Node>
             <Node name="Console_Application" expanded="True">
-              <Node name="Controller" expanded="True">
-                <Node name="ClothesController.cs" selected="True" />
-              </Node>
+              <Node name="Controller" expanded="True" />
             </Node>
             <Node name="DataAccses" expanded="True">
               <Node name="Interface" expanded="True" />
               <Node name="Repository" expanded="True" />
+            </Node>
+            <Node name="Entities" expanded="True">
+              <Node name="Models" expanded="True">
+                <Node name="Shoes.cs" selected="True" />
+              </Node>
             </Node>
             <Node name="Utilies" expanded="True" />
           </Node>
