@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Business.Interfaces;
 using DataAccses.Repository;
 using Entities.Models;
- 
+using Utilies;
 
 namespace Business.Services
 {
@@ -22,15 +22,15 @@ namespace Business.Services
             {
                 clothes.RefId = count;
                 Clothes IsExist = clothesRepository.Get(g => g.Type == clothes.Type);
-                Clothes IsExist1= clothesRepository.Get(g => g.Size == clothes.Size);
-                if (IsExist != null && IsExist1!=null) return null;
+                Clothes IsExist1 = clothesRepository.Get(g => g.Size == clothes.Size);
+                if (IsExist != null && IsExist1 != null) return null;
                 clothesRepository.Create(clothes);
                 count++;
                 return clothes;
             }
-            catch (Exception)
+            catch (ExceptionsMessage)
             {
-                return null;
+                throw new ExceptionsMessage(ExceptionsMessage.ClothesNotAddMessage);
             }
         }
 
@@ -50,57 +50,94 @@ namespace Business.Services
         {
             try
             {
+
                 Clothes dbClothes = clothesRepository.Get(s => s.RefId == clothes.RefId);
-                dbClothes.Type = clothes.Type;
-                dbClothes.RefId = clothes.RefId;
-                return clothes;
+                if (dbClothes != null)
+                {
+                    dbClothes.Type = clothes.Type;
+                    dbClothes.RefId = clothes.RefId;
+                    return clothes;
+                }
+                else
+                {
+                    return null;
+                }
+
             }
-            catch (Exception)
+            catch (ExceptionsMessage)
             {
+                Console.WriteLine(ExceptionsMessage.ClothesNotUpdateMessage);
+                return default;
+            }
+        }
+
+        public Clothes Delete(int RefId)
+        {
+            
+            try
+            {
+                Clothes dbClothes = clothesRepository.Get(g => g.RefId == RefId);
+                if (dbClothes != null)
+                {
+                    clothesRepository.Delete(dbClothes);
+                    return dbClothes;
+                }
+                else
+                {
+                    throw new ExceptionsMessage();
+                }
+            }
+            catch (ExceptionsMessage)
+            {
+                Console.WriteLine(ExceptionsMessage.ClothesNotDeleteMessage);
+                return null;
+                
+            }
+            
+        }
+
+        public Clothes Get(int RefId)
+        {
+            try
+            {
+                Clothes dbClothes = clothesRepository.Get(g => g.RefId == RefId);
+                if (dbClothes != null)
+                {
+                    return dbClothes;
+                }
+                else
+                {
+                    throw new ExceptionsMessage();
+                }
+            }
+            catch (ExceptionsMessage)
+            {
+                Console.WriteLine(ExceptionsMessage.ClothesNotFoundMessage);
                 return null;
             }
             
         }
 
-        public Clothes Delete(int RefId)
-        {
-            Clothes dbClothes = clothesRepository.Get(g => g.RefId == RefId);
-            if (dbClothes != null)
-            {
-                clothesRepository.Delete(dbClothes);
-                return dbClothes;
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-        public Clothes Get(int RefId)
-        {
-            Clothes dbClothes = clothesRepository.Get(g => g.RefId == RefId);
-            if (dbClothes != null)
-            {
-               
-                return dbClothes;
-            }
-            else
-            {
-                return null;
-            }
-        }
-
         public Clothes Get(string Type)
         {
-            Clothes dbClothes = clothesRepository.Get(g => g.Type == Type);
-            if (dbClothes != null)
+            try
             {
-                return dbClothes;
+                Clothes dbClothes = clothesRepository.Get(g => g.Type == Type);
+                if (dbClothes != null)
+                {
+                    return dbClothes;
+                }
+                else
+                {
+                    throw new ExceptionsMessage();
+                }
             }
-            else
+            catch (ExceptionsMessage)
             {
+                Console.WriteLine(ExceptionsMessage.ClothesNotFoundTypeMessage);
                 return null;
             }
+            
         }
 
         

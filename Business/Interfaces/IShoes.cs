@@ -8,9 +8,9 @@ namespace Business.Interfaces
         Shoes Creat(Shoes shoes);
         Shoes Delete(int RefId);
         Shoes Update(int RefId, Shoes shoes);
-        Shoes Get(int RefNum);
-        Shoes Get(string Name);
+        Shoes Get(int RefId);
+        Shoes Get(string Type);
         List<Shoes> GetAll();
-        List<Shoes> GetAll(int Size);
+        List<Shoes> GetAll(int Quantity);
     }
 }

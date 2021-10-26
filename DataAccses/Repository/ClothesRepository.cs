@@ -5,7 +5,7 @@ using Entities.Models;
 
 namespace DataAccses.Repository
 {
-    public class ClothesRepository : IRepository<Clothes> 
+    public class ClothesRepository : IRepository <Clothes> 
     {
         public bool Create(Clothes entity)
         {

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Business.Interfaces;
 using DataAccses.Repository;
 using Entities.Models;
@@ -15,43 +16,87 @@ namespace Business.Services
         }
         public Shoes Creat(Shoes shoes)
         {
-            shoes.RefId = count;
-            Shoes IsExist = shoesRepository.Get(g => g.Type.ToLower() == shoes.Type.ToLower());
-            if (IsExist != null)
+            try
+            {
+                shoes.RefId = count;
+                Shoes IsExist = shoesRepository.Get(g => g.Type.ToLower() == shoes.Type.ToLower());
+                Shoes IsExist1 = shoesRepository.Get(g => g.Size == shoes.Size);
+                if (IsExist != null && IsExist1 != null) return null;
+                shoesRepository.Create(shoes);
+                count++;
+                return shoes;
+
+            }
+            catch (System.Exception)
+            {
                 return null;
-            shoesRepository.Create(shoes);
-            count++;
-            return shoes;
+            }
         }
 
         public Shoes Delete(int RefId)
         {
-            throw new System.NotImplementedException();
+            Shoes dbShoes = shoesRepository.Get(g => g.RefId == RefId);
+            if (dbShoes != null)
+            {
+                shoesRepository.Delete(dbShoes);
+                return dbShoes;
+            }
+            else
+            {
+                return null;
+            }
         }
 
-        public Shoes Get(int RefNum)
+        public Shoes Get(int RefId)
         {
-            throw new System.NotImplementedException();
+           Shoes dbShoes = shoesRepository.Get(g => g.RefId == RefId);
+            if (dbShoes != null)
+            {
+                return dbShoes;
+            }
+            else
+            {
+                return null;
+            }
         }
 
-        public Shoes Get(string Name)
+        public Shoes Get(string Type)
         {
-            throw new System.NotImplementedException();
+           Shoes dbShoes = shoesRepository.Get(g => g.Type == Type);
+            if (dbShoes != null)
+            {
+                return dbShoes;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public List<Shoes> GetAll()
         {
-            throw new System.NotImplementedException();
+            return shoesRepository.GetAll();
         }
 
-        public List<Shoes> GetAll(int Size)
+        public List<Shoes> GetAll(int Quantity)
         {
-            throw new System.NotImplementedException();
+            List <Shoes> makasin = shoesRepository.GetAll(g => g.Quantity == Quantity);
+            return makasin;
         }
 
         public Shoes Update(int RefId, Shoes shoes)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                Shoes dbmakasin = shoesRepository.Get(p => p.RefId == shoes.RefId);
+                dbmakasin.Type = shoes.Type;
+                dbmakasin.RefId = shoes.RefId;
+                return shoes;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
     }
 }

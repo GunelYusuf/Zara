@@ -10,7 +10,8 @@
       "Business/1.0.0": {
         "dependencies": {
           "DataAccses": "1.0.0",
-          "Entities": "1.0.0"
+          "Entities": "1.0.0",
+          "Utilies": "1.0.0"
         },
         "runtime": {
           "Business.dll": {}
@@ -235,6 +236,11 @@
         "runtime": {
           "Entities.dll": {}
         }
+      },
+      "Utilies/1.0.0": {
+        "runtime": {
+          "Utilies.dll": {}
+        }
       }
     }
   },
@@ -383,6 +389,11 @@
       "sha512": ""
     },
     "Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Utilies/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

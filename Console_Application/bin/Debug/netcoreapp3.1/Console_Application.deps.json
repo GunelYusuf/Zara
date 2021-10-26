@@ -183,7 +183,8 @@
       "Business/1.0.0": {
         "dependencies": {
           "DataAccses": "1.0.0",
-          "Entities": "1.0.0"
+          "Entities": "1.0.0",
+          "Utilies": "1.0.0"
         },
         "runtime": {
           "Business.dll": {}

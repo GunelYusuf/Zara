@@ -68,9 +68,13 @@ namespace Console_Application.Controller
         }
         public void GeT()
         { 
-            Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Enter clothes Type: ");
+            nameof: Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Enter clothes Type: ");
             string type = Console.ReadLine();
             Clothes coat = clothesService.Get(type);
+            if (coat==null)
+            {
+                goto nameof;
+            }
             Helper.ChangeTextColor(ConsoleColor.Blue, $"{coat.Type} is {coat.RefId} and {coat.Quantity}");
         }
         public void DeleteClothes()
@@ -100,14 +104,17 @@ namespace Console_Application.Controller
         }
         public void Update()
         {
-            Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Enter clothes RefId: ");
+            nameof: Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Enter clothes RefId: ");
             string id = Console.ReadLine();
             int RefId;
             bool isTrue = int.TryParse(id, out RefId);
             if (isTrue)
             {
                 int Id = int.Parse(id);
-                clothesService.Get(id);
+                if (clothesService.Get(id)==null)
+                {
+                    goto nameof;
+                }
                 Helper.ChangeTextColor(ConsoleColor.DarkBlue, $"Please,Enter new size: ");
                 int size = int.Parse(Console.ReadLine());
                 Helper.ChangeTextColor(ConsoleColor.DarkBlue, $"Please,Enter new type:");

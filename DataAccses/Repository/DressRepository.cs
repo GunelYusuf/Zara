@@ -5,13 +5,13 @@ using Entities.Models;
 
 namespace DataAccses.Repository
 {
-    public class BagsRepository : IRepository<Bags>
+    public class DressRepository: IRepository <Dress>
     {
-        public bool Create(Bags entity)
+        public bool Create(Dress entity)
         {
             try
             {
-               DbContext.Bags.Add(entity);
+                DbContext.Dresses.Add(entity);
                 return true;
             }
             catch (Exception)
@@ -20,11 +20,11 @@ namespace DataAccses.Repository
             }
         }
 
-        public bool Delete(Bags entity)
+        public bool Delete(Dress entity)
         {
             try
             {
-                DbContext.Bags.Remove(entity);
+                DbContext.Dresses.Remove(entity);
                 return true;
             }
             catch (Exception)
@@ -33,27 +33,25 @@ namespace DataAccses.Repository
             }
         }
 
-        public Bags Get(Predicate<Bags> filter = null)
+        public Dress Get(Predicate<Dress> filter = null)
         {
             try
             {
-                return filter == null ? DbContext.Bags[0]
-               : DbContext.Bags.Find(filter);
-
+                return filter == null ? DbContext.Dresses[0]
+                : DbContext.Dresses.Find(filter);
             }
             catch (Exception)
             {
                 throw;
             }
-           
+            
         }
-
-        public List<Bags> GetAll(Predicate<Bags> filter = null)
+        public List<Dress> GetAll(Predicate<Dress> filter = null)
         {
             try
             {
-                return filter == null ? DbContext.Bags
-                    : DbContext.Bags.FindAll(filter);
+                return filter == null ? DbContext.Dresses
+                    : DbContext.Dresses.FindAll(filter);
             }
             catch (Exception)
             {
@@ -61,12 +59,12 @@ namespace DataAccses.Repository
             }
         }
 
-        public bool Update(Bags entity)
+        public bool Update(Dress entity)
         {
             try
             {
-                Bags dbBags = Get(c => c.RefId == entity.RefId);
-                dbBags = entity;
+                Dress midi = DbContext.Dresses.Find(m => m.RefId == entity.RefId);
+                midi = entity;
                 return true;
             }
             catch (Exception)

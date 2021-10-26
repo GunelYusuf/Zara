@@ -45,7 +45,6 @@ namespace Console_Application
                         case (int)Helper.Menu.GetAllQuantity:
                             clothesController.GetAllQuantity();
                             break;
-                       
                     }
                 }
                 else if(menu==0)

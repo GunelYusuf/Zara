@@ -208,7 +208,8 @@
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "DataAccses": "1.0.0",
-          "Entities": "1.0.0"
+          "Entities": "1.0.0",
+          "Utilies": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Business.dll": {}

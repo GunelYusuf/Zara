@@ -9,6 +9,8 @@ namespace Entities.Models
 
         public int RefId { get; set; }
 
+        public int Size { get; set; }
+
         public string Type { get; set;}
     }
 }
