@@ -10,6 +10,8 @@ namespace Entities.Models
 
         public int Quantity { get; set; }
 
+        //public string Type { get; set; }
+
         public Clothes Clothes { get; set; }
     }
 }

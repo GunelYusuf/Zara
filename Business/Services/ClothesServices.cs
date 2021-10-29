@@ -122,7 +122,7 @@ namespace Business.Services
         {
             try
             {
-                Clothes dbClothes = clothesRepository.Get(g => g.Type == Type);
+                Clothes dbClothes = clothesRepository.Get(g => g.Type.ToLower() == Type.ToLower());
                 if (dbClothes != null)
                 {
                     return dbClothes;

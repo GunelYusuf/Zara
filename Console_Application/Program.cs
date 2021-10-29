@@ -11,7 +11,7 @@ namespace Console_Application
         static void Main(string[] args)
         {
             ClothesController clothesController = new ClothesController();
-            
+            DressController dressController = new DressController();
             Helper.ChangeTextColor(ConsoleColor.Magenta, "Welcome Zara");
             while (true)
             {
@@ -19,7 +19,7 @@ namespace Console_Application
                 string selectedMenu = Console.ReadLine();
                 int menu;
                 bool isTrue = int.TryParse(selectedMenu, out menu);
-                if (isTrue && menu >= 1 && menu <= 8)
+                if (isTrue && menu >= 1 && menu <= 9)
                 {
                     switch (menu)
                     {
@@ -44,6 +44,14 @@ namespace Console_Application
                             break;
                         case (int)Helper.Menu.GetAllQuantity:
                             clothesController.GetAllQuantity();
+                            break;
+                        case (int)Helper.Menu.CreateDress:
+                            clothesController.GetAllClothes();
+                            dressController.Create();
+                            break;
+                        case (int)Helper.Menu.GetAllDressWithClothes:
+                            clothesController.GetAllClothes();
+                            dressController.GetAllDressWithClothes();
                             break;
                     }
                 }

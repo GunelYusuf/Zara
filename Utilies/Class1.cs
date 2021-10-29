@@ -23,7 +23,10 @@ namespace Utilies.Helper
             GetClotheswithType=5,
             GetAllClothes=6,
             GetClotheswithSize=7,
-            GetAllQuantity=8
+            GetAllQuantity=8,
+            CreateDress=9,
+            GetAllDressWithClothes=10
+
 
         }
     }
