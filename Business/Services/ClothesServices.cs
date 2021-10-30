@@ -49,7 +49,6 @@ namespace Business.Services
         {
             try
             {
-
                 Clothes dbClothes = clothesRepository.Get(s => s.RefId == clothes.RefId);
                 if (dbClothes != null)
                 {

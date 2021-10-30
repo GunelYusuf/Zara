@@ -11,7 +11,7 @@ namespace Console_Application
         static void Main(string[] args)
         {
             ClothesController clothesController = new ClothesController();
-            
+            CategoryController categoryController = new CategoryController();
             Helper.ChangeTextColor(ConsoleColor.Magenta, "Welcome Zara");
             while (true)
             {
@@ -23,6 +23,9 @@ namespace Console_Application
                 {
                     switch (menu)
                     {
+                        case (int)Helper.Menu.CreateCategory:
+                            categoryController.Create();
+                            break;
                         case (int)Helper.Menu.CreateClothes:
                             clothesController.Create();
                             break;

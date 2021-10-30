@@ -7,13 +7,17 @@ namespace DataAccses.Repository
 {
     public class CategoryRepository /*: IRepository <Category>*/
     {
-        public CategoryRepository()
-        {
-        }
-
         public bool Create(Category entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                DbContext.Category.Add(entity);
+                return true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public bool Delete(Category entity)
@@ -23,12 +27,29 @@ namespace DataAccses.Repository
 
         public Category Get(Predicate<Category> filter = null)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return filter == null ? DbContext.Category[0]
+               : DbContext.Category.Find(filter);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public List<Category> GetAll(Predicate<Category> filter = null)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return filter == null ? DbContext.Category
+                    : DbContext.Category.FindAll(filter);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public bool Update(Category entity)

@@ -8,15 +8,21 @@ namespace Console_Application.Controller
     public class ClothesController
     {
         public ClothesServices clothesService { get; }
+        public CategoryServices categoryServices { get; }
         public ClothesController()
         {
             clothesService = new ClothesServices();
+            categoryServices = new CategoryServices();
         }
-        public void Create()
+        public void Create() 
         {
-            Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Please, choose possible category: ");
+            foreach (var item in categoryServices.GetAll())
+            {
+                Console.WriteLine(item.Type);
+            }
+            Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Please,Enter type: ");
             string type = Console.ReadLine();
-            EnterType: Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Enter clothes Size: ");
+            EnterType: Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Enter Clothes Size: ");
             string size = Console.ReadLine();
             Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Enter Clothes Amount: ");
             string Amount = Console.ReadLine();
