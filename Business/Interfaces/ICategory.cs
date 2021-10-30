@@ -8,7 +8,7 @@ namespace Business.Interfaces
     {
         Category Create(Category category);
         Category Update(int RefId, Category category);
-        Category Delete(int RefId);
+        Category Delete(string category);
         Category Get(string category);
 
         List<Category> GetAll();

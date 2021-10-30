@@ -22,7 +22,15 @@ namespace DataAccses.Repository
 
         public bool Delete(Category entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+               DbContext.Category.Remove(entity);
+               return true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public Category Get(Predicate<Category> filter = null)

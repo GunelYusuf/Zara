@@ -71,7 +71,6 @@ namespace Business.Services
 
         public Clothes Delete(int RefId)
         {
-            
             try
             {
                 Clothes dbClothes = clothesRepository.Get(g => g.RefId == RefId);

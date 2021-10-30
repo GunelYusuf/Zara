@@ -36,9 +36,27 @@ namespace Business.Services
         }
 
 
-        public Category Delete(int RefId)
+        public Category Delete(string category)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Category dbCategory = categoryRepository.Get(g => g.categoryName == category);
+                if (dbCategory != null)
+                {
+                    categoryRepository.Delete(dbCategory);
+                    return dbCategory;
+                }
+                else
+                {
+                    throw new ExceptionsMessage();
+                }
+            }
+            catch (ExceptionsMessage)
+            {
+                Console.WriteLine(ExceptionsMessage.ClothesNotDeleteMessage);
+                return null;
+
+            }
         }
 
         public Category Get(string name)

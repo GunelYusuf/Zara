@@ -33,6 +33,12 @@ namespace Console_Application
                         case (int)Helper.Menu.CreateKind:
                             kindController.Create();
                             break;
+                        case (int)Helper.Menu.GetAllClothes:
+                            clothesController.GetAllClothes();
+                            break;
+                        case (int)Helper.Menu.DeleteCategory:
+                            categoryController.DeleteCategory();
+                            break;
                             //case (int)Helper.Menu.UpdateClothes:
                             //    clothesController.Update();
                             //    break;
@@ -46,9 +52,7 @@ namespace Console_Application
                             //case (int)Helper.Menu.GetClotheswithType:
                             //    clothesController.GeT();
                             //    break;
-                            //case (int)Helper.Menu.GetAllClothes:
-                            //    clothesController.GetAllClothes();
-                            //    break;
+
                             //case (int)Helper.Menu.GetAllQuantity:
                             //    clothesController.GetAllQuantity();
                             //    break;
@@ -71,8 +75,7 @@ namespace Console_Application
 
         static void ShowMenu()
         {
-            Helper.ChangeTextColor(ConsoleColor.DarkGreen, "1-Create Category,2-Create Clothes,3- Create Kind,4-Delete Clothes,5-Get Clothes with RefId," +
-                   "6-Get Clothes with Type,7-All Clothes,8-Get Clothes with Size,9-Get All Clothes Quantity, 0-Exit");
+            Helper.ChangeTextColor(ConsoleColor.DarkGreen, "1-Create Category,2-Create Clothes,3- Create Kind,4-All Clothes");
             Helper.ChangeTextColor(ConsoleColor.DarkYellow, "Select option: ");
         }
     }

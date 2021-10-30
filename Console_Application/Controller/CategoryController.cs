@@ -42,11 +42,33 @@ namespace Console_Application.Controller
                   Helper.ChangeTextColor(ConsoleColor.DarkMagenta, $"{category.categoryName} category already exists");
                   return;
                }
-                
-               
             }
             
         }
 
+        public void DeleteCategory()
+        {
+            GetAllCategory();
+            Helper.ChangeTextColor(ConsoleColor.DarkBlue, "Please, Enter Category Name: ");
+            string name = Console.ReadLine();
+            if (categoryService.Delete(name) != null)
+            {
+                Helper.ChangeTextColor(ConsoleColor.DarkGreen,$"{name} is deleted!");
+                return;
+            }
+            else
+            {
+                Helper.ChangeTextColor(ConsoleColor.DarkRed, $"No such {name} was found");
+            }
+        }
+
+        public void GetAllCategory()
+        {
+            Helper.ChangeTextColor(ConsoleColor.DarkYellow, "All Category:");
+            foreach (Category category in categoryService.GetAll())
+            {
+                Helper.ChangeTextColor(ConsoleColor.DarkBlue, $"The Category: {category.categoryName}");
+            }
+        }
     }
 }
