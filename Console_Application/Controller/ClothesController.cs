@@ -14,7 +14,7 @@ namespace Console_Application.Controller
         }
         public void Create()
         {
-            Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Enter Clothes Type: ");
+            Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Please, choose possible category: ");
             string type = Console.ReadLine();
             EnterType: Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Enter clothes Size: ");
             string size = Console.ReadLine();

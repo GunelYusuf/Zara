@@ -16,16 +16,16 @@ namespace Utilies.Helper
 
         public enum Menu
         {
-            CreateClothes=1,
-            UpdateClothes=2,
-            DeleteClothes=3,
-            GetClotheswithRefId=4,
-            GetClotheswithType=5,
-            GetAllClothes=6,
-            GetClotheswithSize=7,
-            GetAllQuantity=8,
-            CreateDress=9,
-            GetAllDressWithClothes=10
+            CreateCategory=1,
+            CreateClothes=2,
+            UpdateClothes=3,
+            DeleteClothes=4,
+            GetClotheswithRefId=5,
+            GetClotheswithType=6,
+            GetAllClothes=7,
+            GetClotheswithSize=8,
+            GetAllQuantity=9,
+           
 
 
         }

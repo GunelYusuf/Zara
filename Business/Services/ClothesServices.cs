@@ -21,9 +21,8 @@ namespace Business.Services
             try
             {
                 clothes.RefId = count;
-                Clothes IsExist = clothesRepository.Get(g => g.Type == clothes.Type);
-                Clothes IsExist1 = clothesRepository.Get(g => g.Size == clothes.Size);
-                if (IsExist != null && IsExist1 != null) return null;
+                Clothes IsExist =clothesRepository.Get(g => g.Type == clothes.Type && g.Size == clothes.Size);
+                if (IsExist != null) return null;
                 clothesRepository.Create(clothes);
                 count++;
                 return clothes;

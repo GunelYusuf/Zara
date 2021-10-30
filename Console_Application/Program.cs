@@ -11,7 +11,7 @@ namespace Console_Application
         static void Main(string[] args)
         {
             ClothesController clothesController = new ClothesController();
-            DressController dressController = new DressController();
+            
             Helper.ChangeTextColor(ConsoleColor.Magenta, "Welcome Zara");
             while (true)
             {
@@ -45,14 +45,7 @@ namespace Console_Application
                         case (int)Helper.Menu.GetAllQuantity:
                             clothesController.GetAllQuantity();
                             break;
-                        case (int)Helper.Menu.CreateDress:
-                            clothesController.GetAllClothes();
-                            dressController.Create();
-                            break;
-                        case (int)Helper.Menu.GetAllDressWithClothes:
-                            clothesController.GetAllClothes();
-                            dressController.GetAllDressWithClothes();
-                            break;
+                        
                     }
                 }
                 else if(menu==0)
@@ -71,7 +64,7 @@ namespace Console_Application
 
         static void ShowMenu()
         {
-            Helper.ChangeTextColor(ConsoleColor.DarkGreen, "1-Create Clothes,2-Update Clothes,3-Delete Clothes,4-Get Clothes with RefId," +
+            Helper.ChangeTextColor(ConsoleColor.DarkGreen, "1-Create Category,2-Create Clothes,3-Delete Clothes,4-Get Clothes with RefId," +
                    "5-Get Clothes with Type,6-All Clothes,7-Get Clothes with Size,8-Get All Clothes Quantity, 0-Exit");
             Helper.ChangeTextColor(ConsoleColor.DarkYellow, "Select option: ");
         }
