@@ -6,10 +6,10 @@ namespace Business.Interfaces
 {
     public interface ICategory
     {
-        Category Create(Category type);
-        Category Update(int RefId, Category type);
+        Category Create(Category category);
+        Category Update(int RefId, Category category);
         Category Delete(int RefId);
-        Category Get(string Type);
+        Category Get(string category);
 
         List<Category> GetAll();
         List<Category> GetAll(int Quantity);

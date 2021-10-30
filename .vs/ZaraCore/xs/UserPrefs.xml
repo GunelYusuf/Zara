@@ -1,21 +1,25 @@
 ﻿<Properties StartupConfiguration="{431B6075-01B8-4530-807C-BC40E9370B17}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Console_Application/Controller/CategoryController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Business/Services/ClothesServices.cs">
     <Files>
-      <File FileName="Entities/Models/Clothes.cs" Line="8" Column="8" />
-      <File FileName="Utilies/Class1.cs" />
-      <File FileName="Business/Services/ClothesServices.cs" />
-      <File FileName="DataAccses/Repository/ClothesRepository.cs" />
-      <File FileName="Console_Application/Controller/ClothesController.cs" />
-      <File FileName="Console_Application/Program.cs" />
-      <File FileName="Entities/Models/Category.cs" />
-      <File FileName="Entities/Interface/IEntity.cs" />
-      <File FileName="DataAccses/DbContext.cs" />
-      <File FileName="DataAccses/Interface/IRepository.cs" />
-      <File FileName="DataAccses/Repository/CategoryRepository.cs" />
-      <File FileName="Business/Services/CategoryServices.cs" />
-      <File FileName="Business/Interfaces/ICategory.cs" />
-      <File FileName="Business/Interfaces/IClothes.cs" />
-      <File FileName="Console_Application/Controller/CategoryController.cs" Line="25" Column="14" />
+      <File FileName="Entities/Models/Type.cs" Line="7" Column="27" />
+      <File FileName="Entities/Models/Category.cs" Line="7" Column="48" />
+      <File FileName="DataAccses/Repository/CategoryRepository.cs" Line="52" Column="14" />
+      <File FileName="Business/Services/CategoryServices.cs" Line="68" Column="47" />
+      <File FileName="Console_Application/Controller/CategoryController.cs" Line="16" Column="6" />
+      <File FileName="Entities/Interface/IEntity.cs" Line="1" Column="1" />
+      <File FileName="DataAccses/DbContext.cs" Line="17" Column="13" />
+      <File FileName="DataAccses/Repository/ClothesRepository.cs" Line="1" Column="1" />
+      <File FileName="Business/Interfaces/ICategory.cs" Line="14" Column="33" />
+      <File FileName="DataAccses/Repository/TypeRepository.cs" Line="57" Column="10" />
+      <File FileName="DataAccses/Interface/IRepository.cs" Line="1" Column="1" />
+      <File FileName="Business/Services/KindServices.cs" Line="66" Column="1" />
+      <File FileName="Business/Interfaces/IKind.cs" Line="18" Column="1" />
+      <File FileName="Console_Application/Controller/KindController.cs" Line="48" Column="14" />
+      <File FileName="Console_Application/Controller/ClothesController.cs" Line="3" Column="1" />
+      <File FileName="Entities/Models/Clothes.cs" Line="16" Column="22" />
+      <File FileName="Utilies/Class1.cs" Line="28" Column="30" />
+      <File FileName="Console_Application/Program.cs" Line="14" Column="78" />
+      <File FileName="Business/Services/ClothesServices.cs" Line="123" Column="70" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -27,12 +31,12 @@
                 <Node name="ProjectDependencies" expanded="True" />
               </Node>
               <Node name="Interfaces" expanded="True" />
-              <Node name="Services" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="ClothesServices.cs" selected="True" />
+              </Node>
             </Node>
             <Node name="Console_Application" expanded="True">
-              <Node name="Controller" expanded="True">
-                <Node name="CategoryController.cs" selected="True" />
-              </Node>
+              <Node name="Controller" expanded="True" />
             </Node>
             <Node name="DataAccses" expanded="True">
               <Node name="Interface" expanded="True" />

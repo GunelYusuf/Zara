@@ -18,13 +18,14 @@ namespace Utilies.Helper
         {
             CreateCategory=1,
             CreateClothes=2,
-            UpdateClothes=3,
-            DeleteClothes=4,
-            GetClotheswithRefId=5,
-            GetClotheswithType=6,
-            GetAllClothes=7,
-            GetClotheswithSize=8,
-            GetAllQuantity=9,
+            CreateKind=3,
+            UpdateClothes=4,
+            DeleteClothes=5,
+            GetClotheswithRefId=6,
+            GetClotheswithType=7,
+            GetAllClothes=8,
+            GetClotheswithSize=9,
+            GetAllQuantity=10,
            
 
 

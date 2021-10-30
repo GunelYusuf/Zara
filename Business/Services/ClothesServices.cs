@@ -7,7 +7,7 @@ using Utilies;
 
 namespace Business.Services
 {
-    public class ClothesServices : IClothes
+    public class ClothesServices /*: IClothes*/
     {
         public ClothesRepository clothesRepository { get; set; }
         private static int count { get; set; }
@@ -21,7 +21,7 @@ namespace Business.Services
             try
             {
                 clothes.RefId = count;
-                Clothes IsExist =clothesRepository.Get(g => g.Type == clothes.Type && g.Size == clothes.Size);
+                Clothes IsExist =clothesRepository.Get(g => g.Category == clothes.Category && g.Size == clothes.Size && g.Kind==clothes.Kind);
                 if (IsExist != null) return null;
                 clothesRepository.Create(clothes);
                 count++;
@@ -45,29 +45,29 @@ namespace Business.Services
             return clothes;
         }
 
-        public Clothes Update(int RefId, Clothes clothes)
-        {
-            try
-            {
-                Clothes dbClothes = clothesRepository.Get(s => s.RefId == clothes.RefId);
-                if (dbClothes != null)
-                {
-                    dbClothes.Type = clothes.Type;
-                    dbClothes.RefId = clothes.RefId;
-                    return clothes;
-                }
-                else
-                {
-                    return null;
-                }
+        //public Clothes Update(int RefId, Clothes clothes)
+        //{
+        //    try
+        //    {
+        //        Clothes dbClothes = clothesRepository.Get(s => s.RefId == clothes.RefId);
+        //        if (dbClothes != null)
+        //        {
+        //            dbClothes.Type = clothes.Type;
+        //            dbClothes.RefId = clothes.RefId;
+        //            return clothes;
+        //        }
+        //        else
+        //        {
+        //            return null;
+        //        }
 
-            }
-            catch (ExceptionsMessage)
-            {
-                Console.WriteLine(ExceptionsMessage.ClothesNotUpdateMessage);
-                return default;
-            }
-        }
+        //    }
+        //    catch (ExceptionsMessage)
+        //    {
+        //        Console.WriteLine(ExceptionsMessage.ClothesNotUpdateMessage);
+        //        return default;
+        //    }
+        //}
 
         public Clothes Delete(int RefId)
         {
@@ -116,11 +116,11 @@ namespace Business.Services
             
         }
 
-        public Clothes Get(string Type)
+        public Clothes Get(string category)
         {
             try
             {
-                Clothes dbClothes = clothesRepository.Get(g => g.Type.ToLower() == Type.ToLower());
+                Clothes dbClothes = clothesRepository.Get(g => g.Category.ToLower() == category.ToLower());
                 if (dbClothes != null)
                 {
                     return dbClothes;

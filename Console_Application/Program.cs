@@ -12,6 +12,7 @@ namespace Console_Application
         {
             ClothesController clothesController = new ClothesController();
             CategoryController categoryController = new CategoryController();
+            KindController kindController = new KindController();
             Helper.ChangeTextColor(ConsoleColor.Magenta, "Welcome Zara");
             while (true)
             {
@@ -19,7 +20,7 @@ namespace Console_Application
                 string selectedMenu = Console.ReadLine();
                 int menu;
                 bool isTrue = int.TryParse(selectedMenu, out menu);
-                if (isTrue && menu >= 1 && menu <= 9)
+                if (isTrue && menu >= 1 && menu <= 10)
                 {
                     switch (menu)
                     {
@@ -29,26 +30,29 @@ namespace Console_Application
                         case (int)Helper.Menu.CreateClothes:
                             clothesController.Create();
                             break;
-                        case (int)Helper.Menu.UpdateClothes:
-                            clothesController.Update();
+                        case (int)Helper.Menu.CreateKind:
+                            kindController.Create();
                             break;
-                        case (int)Helper.Menu.DeleteClothes:
-                            clothesController.GetAllClothes();
-                            clothesController.DeleteClothes();
-                            break;
-                        case (int)Helper.Menu.GetClotheswithRefId:
-                            clothesController.Get();
-                            break;
-                        case (int)Helper.Menu.GetClotheswithType:
-                            clothesController.GeT();
-                            break;
-                        case (int)Helper.Menu.GetAllClothes:
-                            clothesController.GetAllClothes();
-                            break;
-                        case (int)Helper.Menu.GetAllQuantity:
-                            clothesController.GetAllQuantity();
-                            break;
-                        
+                            //case (int)Helper.Menu.UpdateClothes:
+                            //    clothesController.Update();
+                            //    break;
+                            //case (int)Helper.Menu.DeleteClothes:
+                            //    clothesController.GetAllClothes();
+                            //    clothesController.DeleteClothes();
+                            //    break;
+                            //case (int)Helper.Menu.GetClotheswithRefId:
+                            //    clothesController.Get();
+                            //    break;
+                            //case (int)Helper.Menu.GetClotheswithType:
+                            //    clothesController.GeT();
+                            //    break;
+                            //case (int)Helper.Menu.GetAllClothes:
+                            //    clothesController.GetAllClothes();
+                            //    break;
+                            //case (int)Helper.Menu.GetAllQuantity:
+                            //    clothesController.GetAllQuantity();
+                            //    break;
+
                     }
                 }
                 else if(menu==0)
@@ -67,8 +71,8 @@ namespace Console_Application
 
         static void ShowMenu()
         {
-            Helper.ChangeTextColor(ConsoleColor.DarkGreen, "1-Create Category,2-Create Clothes,3-Delete Clothes,4-Get Clothes with RefId," +
-                   "5-Get Clothes with Type,6-All Clothes,7-Get Clothes with Size,8-Get All Clothes Quantity, 0-Exit");
+            Helper.ChangeTextColor(ConsoleColor.DarkGreen, "1-Create Category,2-Create Clothes,3- Create Kind,4-Delete Clothes,5-Get Clothes with RefId," +
+                   "6-Get Clothes with Type,7-All Clothes,8-Get Clothes with Size,9-Get All Clothes Quantity, 0-Exit");
             Helper.ChangeTextColor(ConsoleColor.DarkYellow, "Select option: ");
         }
     }

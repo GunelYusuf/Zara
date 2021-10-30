@@ -11,6 +11,8 @@ namespace Entities.Models
 
         public int Quantity { get; set; }
 
-        public string Type{ get; set; }
+        public string Kind{ get; set; }
+
+        public string Category { get; set;}
     }
 }

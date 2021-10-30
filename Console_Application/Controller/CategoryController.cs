@@ -15,31 +15,31 @@ namespace Console_Application.Controller
         }
         public void Create()
         {
-            EnterType: Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Please, Enter category type: ");
-            string type = Console.ReadLine();
-            type.Trim();
-            bool IsAlpha = Regex.IsMatch(type, "^[a-zA-Z]+$");
-            if (type.Length>15)
+            EnterType: Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Please, Enter category of clothes: ");
+            string name = Console.ReadLine();
+            name.Trim();
+            bool IsAlpha = Regex.IsMatch(name, "^[a-zA-Z]+$");
+            if (name.Length>15)
             {
-               Helper.ChangeTextColor(ConsoleColor.DarkRed, "The Name of the Type cannot exceed 15 characters");
+               Helper.ChangeTextColor(ConsoleColor.DarkRed, "The Name of the Category cannot exceed 15 characters");
                goto EnterType;
             }
             if (IsAlpha!=true)
             {
-                Helper.ChangeTextColor(ConsoleColor.DarkRed, "Please,type cannot be empty or numeric!");
+                Helper.ChangeTextColor(ConsoleColor.DarkRed, "Please,category cannot be empty or numeric!");
                 goto EnterType;
             }
             else
             {
-               Category category = new Category { Type = type };
+               Category category = new Category {categoryName=name};
                if (categoryService.Create(category) != null)
                {
-                 Helper.ChangeTextColor(ConsoleColor.DarkCyan, $"{category.Type} is created");
+                 Helper.ChangeTextColor(ConsoleColor.DarkCyan, $"{category.categoryName} is created");
                  return;
                }
                else
                {
-                  Helper.ChangeTextColor(ConsoleColor.DarkMagenta, $"{category.Type} category already exists");
+                  Helper.ChangeTextColor(ConsoleColor.DarkMagenta, $"{category.categoryName} category already exists");
                   return;
                }
                 

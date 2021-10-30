@@ -23,7 +23,7 @@ namespace Business.Services
             try
             {
                category.RefId = count;
-               Category IsExist = categoryRepository.Get(g => g.Type == category.Type);
+               Category IsExist = categoryRepository.Get(g => g.categoryName == category.categoryName);
                if (IsExist != null) return null;
                categoryRepository.Create(category);
                count++;
@@ -41,18 +41,18 @@ namespace Business.Services
             throw new NotImplementedException();
         }
 
-        public Category Get(string Type)
+        public Category Get(string name)
         {
             try
             {
-                Category dbCategory = categoryRepository.Get(g => g.Type.ToLower() == Type.ToLower());
+                Category dbCategory = categoryRepository.Get(g => g.categoryName.ToLower() == name.ToLower());
                 if (dbCategory != null)
                 {
                     return dbCategory;
                 }
                 else
                 {
-                    throw new ExceptionsMessage();
+                    return null;
                 }
             }
             catch (ExceptionsMessage)
