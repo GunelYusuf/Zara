@@ -130,8 +130,8 @@ namespace Console_Application.Controller
                 Helper.ChangeTextColor(ConsoleColor.DarkRed, "Please select correct format");
                 return;
             }
-
-            //}
+        }
+            
             //public void Update()
             //{
             //    nameof: Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Enter clothes RefId: ");
@@ -185,7 +185,7 @@ namespace Console_Application.Controller
             //    }
 
             //}
-        }
+        
     }
 }
 

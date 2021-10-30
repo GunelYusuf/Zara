@@ -90,9 +90,27 @@ namespace Business.Services
             throw new NotImplementedException();
         }
 
-        public Category Update(int RefId, Category type)
+        public Category Update(string category,string newName)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Category dbCategory = categoryRepository.Get(s => s.categoryName == category);
+                if (dbCategory != null)
+                {
+                    categoryRepository.Update(dbCategory,newName);
+                    return dbCategory;
+                }
+                else
+                {
+                    return null;
+                }
+
+            }
+            catch (ExceptionsMessage)
+            {
+                Console.WriteLine(ExceptionsMessage.ClothesNotUpdateMessage);
+                return default;
+            }
         }
 
       

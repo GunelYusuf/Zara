@@ -7,7 +7,7 @@ namespace Business.Interfaces
     public interface ICategory
     {
         Category Create(Category category);
-        Category Update(int RefId, Category category);
+        Category Update(string category,string name);
         Category Delete(string category);
         Category Get(string category);
 

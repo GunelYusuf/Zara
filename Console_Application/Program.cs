@@ -20,7 +20,7 @@ namespace Console_Application
                 string selectedMenu = Console.ReadLine();
                 int menu;
                 bool isTrue = int.TryParse(selectedMenu, out menu);
-                if (isTrue && menu >= 1 && menu <= 10)
+                if (isTrue && menu >= 1 && menu <= 11)
                 {
                     switch (menu)
                     {
@@ -32,6 +32,9 @@ namespace Console_Application
                             break;
                         case (int)Helper.Menu.CreateKind:
                             kindController.Create();
+                            break;
+                        case (int)Helper.Menu.GetAllCategory:
+                            categoryController.GetAllCategory();
                             break;
                         case (int)Helper.Menu.GetAllClothes:
                             clothesController.GetAllClothes();
@@ -45,9 +48,9 @@ namespace Console_Application
                         case (int)Helper.Menu.DeleteKind:
                             kindController.DeleteKind();
                             break;
-                            //case (int)Helper.Menu.UpdateClothes:
-                            //    clothesController.Update();
-                            //    break;
+                        case (int)Helper.Menu.UpdateCategory:
+                            categoryController.Update();
+                            break;
                             //case (int)Helper.Menu.DeleteClothes:
                             //    clothesController.GetAllClothes();
                             //    clothesController.DeleteClothes();
@@ -81,7 +84,7 @@ namespace Console_Application
 
         static void ShowMenu()
         {
-            Helper.ChangeTextColor(ConsoleColor.DarkGreen, "1-Create Category,2-Create Clothes,3- Create Kind,4-All Clothes,5-Delete Category,6-All Kinds,7-Delete Kind");
+            Helper.ChangeTextColor(ConsoleColor.DarkGreen, "1-Create Category,2-Create Clothes,3- Create Kind,4-All Category,5-All Clothes,6-Delete Category,7-All Kinds,8-Delete Kind,9-Update Category");
             Helper.ChangeTextColor(ConsoleColor.DarkYellow, "Select option: ");
         }
     }

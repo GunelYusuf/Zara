@@ -60,9 +60,17 @@ namespace DataAccses.Repository
             }
         }
 
-        public bool Update(Category entity)
+        public bool Update(Category entity,string newName)
         {
-            throw new NotImplementedException();
+            try
+            {
+                entity.categoryName = newName;
+                return true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
