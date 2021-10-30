@@ -76,17 +76,17 @@ namespace Business.Services
                 Clothes dbClothes = clothesRepository.Get(g => g.RefId == RefId);
                 if (dbClothes != null)
                 {
-                    clothesRepository.Delete(dbClothes);
-                    return dbClothes;
+                   clothesRepository.Delete(dbClothes);
+                   return dbClothes;
                 }
                 else
                 {
-                    throw new ExceptionsMessage();
+                    return null;
                 }
             }
             catch (ExceptionsMessage)
             {
-                Console.WriteLine(ExceptionsMessage.ClothesNotDeleteMessage);
+                Console.WriteLine(ExceptionsMessage.ClothesNotDeleteMessage); 
                 return null;
                 
             }

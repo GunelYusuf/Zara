@@ -8,7 +8,7 @@ namespace Business.Interfaces
     {
         Kind Create(Kind kind);
         Kind Update(int RefId, Kind kind);
-        Kind Delete(int RefId);
+        Kind Delete(string name);
         Kind Get(string Type);
 
         List<Kind> GetAll();

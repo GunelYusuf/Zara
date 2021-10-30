@@ -35,7 +35,6 @@ namespace Business.Services
             }
         }
 
-
         public Category Delete(string category)
         {
             try
@@ -48,7 +47,7 @@ namespace Business.Services
                 }
                 else
                 {
-                    throw new ExceptionsMessage();
+                    return null;
                 }
             }
             catch (ExceptionsMessage)

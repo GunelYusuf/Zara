@@ -39,6 +39,12 @@ namespace Console_Application
                         case (int)Helper.Menu.DeleteCategory:
                             categoryController.DeleteCategory();
                             break;
+                        case (int)Helper.Menu.GetAllKind:
+                            kindController.GetAllKind();
+                            break;
+                        case (int)Helper.Menu.DeleteKind:
+                            kindController.DeleteKind();
+                            break;
                             //case (int)Helper.Menu.UpdateClothes:
                             //    clothesController.Update();
                             //    break;
@@ -75,7 +81,7 @@ namespace Console_Application
 
         static void ShowMenu()
         {
-            Helper.ChangeTextColor(ConsoleColor.DarkGreen, "1-Create Category,2-Create Clothes,3- Create Kind,4-All Clothes");
+            Helper.ChangeTextColor(ConsoleColor.DarkGreen, "1-Create Category,2-Create Clothes,3- Create Kind,4-All Clothes,5-Delete Category,6-All Kinds,7-Delete Kind");
             Helper.ChangeTextColor(ConsoleColor.DarkYellow, "Select option: ");
         }
     }

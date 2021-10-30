@@ -26,7 +26,15 @@ namespace DataAccses.Repository
 
         public bool Delete(Kind entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                DbContext.Kind.Remove(entity);
+                return true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public Kind Get(Predicate<Kind> filter = null)

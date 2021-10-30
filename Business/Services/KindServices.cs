@@ -38,9 +38,27 @@ namespace Business.Services
             throw new NotImplementedException();
         }
 
-        public Kind Delete(int RefId)
+        public Kind Delete(string name)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Kind dbKind = kindRepository.Get(g => g.kindName == name);
+                if (dbKind != null)
+                {
+                   kindRepository.Delete(dbKind);
+                    return dbKind;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (ExceptionsMessage)
+            {
+                Console.WriteLine(ExceptionsMessage.ClothesNotDeleteMessage);
+                return null;
+
+            }
         }
 
         public Kind Get(string kind)
