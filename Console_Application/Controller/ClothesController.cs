@@ -75,12 +75,13 @@ namespace Console_Application.Controller
                 goto EnterSize;
             }
         }
+
         public void GetAllClothes()
         {
             Helper.ChangeTextColor(ConsoleColor.DarkYellow, "All Clothes:");
             foreach (Clothes clothes in clothesService.GetAll())
             {
-                Helper.ChangeTextColor(ConsoleColor.DarkBlue, $"The Category: {clothes.Category} Kind: {clothes.Kind} Size: {clothes.Size} Quantity: {clothes.Quantity}");
+                Helper.ChangeTextColor(ConsoleColor.DarkBlue, $"Id: {clothes.RefId}; The Category: {clothes.Category}; Kind: {clothes.Kind}; Size: {clothes.Size}; Quantity: {clothes.Quantity}");
             }
         }
 
@@ -117,7 +118,7 @@ namespace Console_Application.Controller
             {
                 if (clothesService.Delete(ClothesId) != null)
                 {
-                    Helper.ChangeTextColor(ConsoleColor.DarkGreen, "Succesfully deleted!");
+                    Helper.ChangeTextColor(ConsoleColor.DarkGreen, $"{ClothesId} is deleted!");
                     return;
                 }
                 else

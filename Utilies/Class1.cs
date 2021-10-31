@@ -25,8 +25,9 @@ namespace Utilies.Helper
             GetAllKind=7,
             DeleteKind=8,
             UpdateCategory=9,
-            GetClotheswithSize=10,
+            DeleteClothes = 10,
             GetAllQuantity=11,
+            
            
 
 
